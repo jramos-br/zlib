@@ -192,7 +192,7 @@ static int getFileCrc(const char* filenameinzip, void* buf, unsigned long size_b
         do
         {
             err = ZIP_OK;
-            size_read = fread(buf,1,size_buf,fin);
+            size_read = (unsigned long)fread(buf,1,size_buf,fin);
             if (size_read < size_buf)
                 if (feof(fin)==0)
             {
@@ -244,7 +244,7 @@ int main(int argc, char *argv[]) {
     char filename_try[MAXFILENAME+16];
     int zipok;
     int err=0;
-    size_t size_buf=0;
+    unsigned long size_buf=0;
     void* buf=NULL;
     const char* password=NULL;
 
