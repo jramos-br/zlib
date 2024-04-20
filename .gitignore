@@ -34,3 +34,8 @@ contrib/vstudio/vc143/arm64
 contrib/nuget/bin
 contrib/nuget/obj
 *.included
+
+contrib/vstudio/vc17mod/arm
+contrib/vstudio/vc17mod/arm64
+contrib/vstudio/vc17mod/x64
+contrib/vstudio/vc17mod/x86
